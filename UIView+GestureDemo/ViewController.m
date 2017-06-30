@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "UIView+Gesture.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -16,14 +18,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    self.imageView.tapAction = ^(UITapGestureRecognizer *tap) {
+        NSLog(@"tap");
+    };
+    
+    self.imageView.swipeUpAction = ^(UISwipeGestureRecognizer *swipe) {
+        NSLog(@"swipeUpAction");
+    };
+    
+    self.imageView.swipeDownAction = ^(UISwipeGestureRecognizer *swipe) {
+        NSLog(@"swipeDownAction");
+    };
+    
+    self.imageView.swipeLeftAction = ^(UISwipeGestureRecognizer *swipe) {
+        NSLog(@"swipeLeftAction");
+    };
+    
+    self.imageView.swipeRightAction = ^(UISwipeGestureRecognizer *swipe) {
+        NSLog(@"swipeRightAction");
+    };
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
