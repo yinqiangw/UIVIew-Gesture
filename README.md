@@ -1,5 +1,5 @@
 # UIVIew-Gesture
-快速给 UI 控件添加手势并监听
+快速给UI控件添加手势并监听
 
 ### 用法
 把UIView + Gesture拖拉到项目中，block中完成对控件的监听
